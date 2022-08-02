@@ -6,7 +6,7 @@ body {
   margin: 0;
   min-height: 100%;
 
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   color: #4a4a4a;
 
@@ -17,6 +17,12 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+button {
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .visually-hidden {

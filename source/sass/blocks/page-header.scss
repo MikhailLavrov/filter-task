@@ -1,5 +1,5 @@
 .page-header {
-  margin-bottom: 30px;
+  margin-bottom: 44px;
 }
 
 .page-header__wrapper {
@@ -7,4 +7,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.page-header__logo {
+  background-color: #2196F3;
+  border-radius: 50%;
+  box-shadow: 0 9px 11px 0 rgba(55, 104, 142, 0.25);
 }
