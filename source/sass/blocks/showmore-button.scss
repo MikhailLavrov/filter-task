@@ -1,0 +1,16 @@
+.showmore-button {
+  border: none;
+  width: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #2196F3;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.showmore-button:hover {
+  box-shadow: inset 0 1px 20px 1px rgba(0, 0, 0, 0.1);
+}

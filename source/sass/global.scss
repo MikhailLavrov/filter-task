@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 600;
+  color: #4a4a4a;
+
+  background-color: #E5E5E5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  position: absolute;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.body-wrapper {
+  margin: 0 auto;
+  padding: 50px 103px;
+
+  min-height: 100%;
+  width: 960px;
+
+  display: flex;
+  flex-direction: column;
+
+
+  position: relative;
+  overflow: hidden;
+}
