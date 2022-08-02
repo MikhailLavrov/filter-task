@@ -1,0 +1,1 @@
+fetch("https://jsonplaceholder.typicode.com/posts").then((o=>o.json())).then((o=>console.log(o)));
