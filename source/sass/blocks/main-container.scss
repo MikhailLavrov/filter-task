@@ -1,6 +1,6 @@
-.main-container__wrapper {
+.main-container {
   display: grid;
-  justify-content: center;
   grid-template-columns: 232px 502px;
   column-gap: 18px;
+  box-sizing: border-box;
 }

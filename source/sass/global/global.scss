@@ -30,26 +30,11 @@ button {
   padding: 0;
   width: 1px;
   height: 1px;
-  border: 0;
+
+  border: none;
   position: absolute;
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.body-wrapper {
-  margin: 0 auto;
-  padding: 50px 103px;
-
-  min-height: 100%;
-  width: 960px;
-
-  display: flex;
-  flex-direction: column;
-
-
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
 }

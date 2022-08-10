@@ -1,0 +1,14 @@
+.body-wrapper {
+  margin: 0 auto;
+  padding: 50px 103px;
+
+  min-height: 100%;
+  width: 960px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
