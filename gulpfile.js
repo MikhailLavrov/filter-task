@@ -17,6 +17,7 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
+      autoprefixer(),
       csso()
     ]))
     .pipe(rename('style.min.css'))
