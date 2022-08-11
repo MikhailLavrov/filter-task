@@ -8,8 +8,6 @@ import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
-import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
 
@@ -19,7 +17,6 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer(),
       csso()
     ]))
     .pipe(rename('style.min.css'))
@@ -60,24 +57,6 @@ const createWebp = () => {
     webp: {}
   }))
   .pipe(gulp.dest('build/img'))
-}
-
-
-// Svg
-const svg = () => {
-  return gulp.src('source/img/**/*.svg', '!source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(gulp.dest('build/img'));
-}
-
-const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
 }
 
 //Copy
@@ -128,14 +107,14 @@ const watcher = () => {
 export const build = gulp.series(
   clean, copy, optimizeImages,
 
-  gulp.parallel(styles,html,scripts,svg,sprite,createWebp),
+  gulp.parallel(styles,html,scripts,createWebp),
 );
 
 //Default
 export default gulp.series(
   clean, copy, copyImages,
 
-  gulp.parallel(styles,html,scripts,svg,sprite,createWebp),
+  gulp.parallel(styles,html,scripts,createWebp),
 
   gulp.series(server,watcher)
 );
