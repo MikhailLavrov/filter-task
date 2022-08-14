@@ -13,7 +13,7 @@ import browser from 'browser-sync';
 
 // Styles
 export const styles = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+  return gulp.src('./source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
@@ -28,36 +28,36 @@ export const styles = () => {
 //Html
 const html = () => {
   return gulp.src('source/*.html')
-  .pipe(htmlmin({collapseWhitespace: true}))
-  .pipe(gulp.dest('build'));
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
 }
 
 //Scripts
 const scripts = () => {
-  return gulp.src('source/js/*.js')
-  .pipe(terser())
-  .pipe(gulp.dest('build/js'))
+  return gulp.src('source/js/**/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('./build/js'))
 }
 
 //Images
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-  .pipe(squoosh())
-  .pipe(gulp.dest('build/img'))
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
 }
 
 const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-  .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/img'))
 }
 
 //Webp
 const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}', '!source/img/favicons', '!source/img/location')
-  .pipe(squoosh({
-    webp: {}
-  }))
-  .pipe(gulp.dest('build/img'))
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img'))
 }
 
 //Copy
@@ -69,7 +69,7 @@ const copy = (done) => {
   ], {
     base: 'source'
   })
-  .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build'))
   done();
 }
 
@@ -99,23 +99,23 @@ const reload = (done) => {
 
 // Watcher
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html', gulp.series(html,reload));
+  gulp.watch('./source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('./source/js/**/*.js', gulp.series(scripts, reload));
+  gulp.watch('./source/*.html', gulp.series(html, reload));
 }
 
 //Build
 export const build = gulp.series(
   clean, copy, optimizeImages,
 
-  gulp.parallel(styles,html,scripts,createWebp),
+  gulp.parallel(styles, html, scripts, createWebp),
 );
 
 //Default
 export default gulp.series(
   clean, copy, copyImages,
 
-  gulp.parallel(styles,html,scripts,createWebp),
+  gulp.parallel(styles, html, scripts, createWebp),
 
-  gulp.series(server,watcher)
+  gulp.series(server, watcher)
 );
