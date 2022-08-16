@@ -15,14 +15,15 @@
   <div class="body-wrapper">
 
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__link" href="#">
-          <picture>
-            <source type="image/webp" srcset="/img/header-logo.webp">
-            <img class="page-header__logo" src="/img/header-logo.png" alt="header-logo" width="60" height="60">
-          </picture>
-        </a>
-      </div>
+      <a class="page-header__link" href="#">
+        <picture>
+          <source media="(max-width: 320px)" type="image/webp" srcset="/img/header-logo-mobile.webp">
+          <source media="(max-width: 320px)" type="image/png" srcset="/img/header-logo-mobile.png">
+
+          <source type="image/webp" srcset="/img/header-logo.webp">
+          <img class="page-header__logo" src="/img/header-logo.png" alt="header-logo" width="60" height="60">
+        </picture>
+      </a>
     </header>
 
     <main class="main-container">
@@ -32,30 +33,33 @@
         <fieldset class="transfer-form__fieldset">
           <legend class="visually-hidden">Количество пересадок.</legend>
           <h2 class="transfer-form__title">Количество пересадок</h2>
-          <label class="transfer-form__checkbox-label">
+          <label class="transfer-form__checkbox-label transfer-form__checkbox-label--all">
             <input class="transfer-form__checkbox" type="checkbox" name="transfer" value="all">
             <span class="transfer-form__checkbox-mark"></span>
-            <span class="transfer-form__checkbox-name">Все</span>
+            <span class="transfer-form__checkbox-name transfer-form__checkbox-name--mobile-all">Все</span>
           </label>
-          <label class="transfer-form__checkbox-label">
+          <label class="transfer-form__checkbox-label transfer-form__checkbox-label--without">
             <input class="transfer-form__checkbox" type="checkbox" name="transfer" value="no" checked>
             <span class="transfer-form__checkbox-mark"></span>
-            <span class="transfer-form__checkbox-name">Без пересадок</span>
+            <span class="transfer-form__checkbox-name transfer-form__checkbox-name--mobile-without">Без пересадок</span>
           </label>
           <label class="transfer-form__checkbox-label">
             <input class="transfer-form__checkbox" type="checkbox" name="transfer" value="one" checked>
             <span class="transfer-form__checkbox-mark"></span>
             <span class="transfer-form__checkbox-name">1 пересадка</span>
+            <span class="transfer-form__checkbox-name transfer-form__checkbox-name--mobile">1</span>
           </label>
           <label class="transfer-form__checkbox-label">
             <input class="transfer-form__checkbox" type="checkbox" name="transfer" value="two" checked>
             <span class="transfer-form__checkbox-mark"></span>
             <span class="transfer-form__checkbox-name">2 пересадки</span>
+            <span class="transfer-form__checkbox-name transfer-form__checkbox-name--mobile">2</span>
           </label>
           <label class="transfer-form__checkbox-label">
             <input class="transfer-form__checkbox" type="checkbox" name="transfer" value="three">
             <span class="transfer-form__checkbox-mark"></span>
             <span class="transfer-form__checkbox-name">3 пересадки</span>
+            <span class="transfer-form__checkbox-name transfer-form__checkbox-name--mobile">3</span>
           </label>
         </fieldset>
       </form>
