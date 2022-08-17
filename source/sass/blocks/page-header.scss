@@ -9,18 +9,18 @@
   align-items: center;
   box-sizing: border-box;
 
-  @media (max-width: 767px) {
-    margin-bottom: 10px;
+  @media (max-width: $max-width) {
+    margin-bottom: $secondary-indent;
     min-height: 40px;
   }
 }
 
 .page-header__logo {
   border-radius: 50%;
-  background-color: #2196F3;
+  background-color: $color-3;
   box-shadow: 0 9px 11px 0 rgba(55, 104, 142, 0.25);
 
-  @media (max-width: 767px) {
+  @media (max-width: $max-width) {
     width: 40px;
     height: 40px;
   }

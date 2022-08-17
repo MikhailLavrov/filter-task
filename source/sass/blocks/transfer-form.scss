@@ -1,28 +1,28 @@
 .transfer-form__fieldset {
   margin: 0;
-  padding: 20px;
+  padding: $primary-indent;
 
   border: none;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: $color-2;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-  @media (max-width: 767px) {
-    margin-bottom: 10px;
+  @media (max-width: $max-width) {
+    margin-bottom: $secondary-indent;
     display: grid;
-    row-gap: 10px;
+    row-gap: $secondary-indent;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (min-width: 480px) and (max-width: 767px) {
+  @media (min-width: $medium-width) and (max-width: $max-width) {
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 20px;
+    column-gap: $primary-indent;
   }
 }
 
 .transfer-form__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: $primary-indent;
   
   font-size: 12px;
   line-height: 1;
@@ -30,7 +30,7 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
 
-  @media (max-width: 767px) {
+  @media (max-width: $max-width) {
     margin: 0;
     grid-column: 1/-1;
   }
@@ -39,20 +39,20 @@
 .transfer-form__checkbox-label {
   display: grid;
   grid-template-columns: 20px 1fr;
-  column-gap: 10px;
+  column-gap: $secondary-indent;
   align-items: center;
   
   cursor: pointer;
 
-  @media (max-width: 767px) {
+  @media (max-width: $max-width) {
     margin-bottom: 0;
     column-gap: 5px;
   }
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: $primary-indent;
 
-    @media (max-width: 767px) {
+    @media (max-width: $max-width) {
       margin-bottom: 0;
     }
   }
@@ -60,13 +60,13 @@
   &--without {
     grid-column: 2/-1;
 
-    @media (min-width: 480px) and (max-width: 767px) {
+    @media (min-width: $medium-width) and (max-width: $max-width) {
       grid-column: 1/2;
     }
   }
 
   &--all {
-    @media (min-width: 480px) and (max-width: 767px) {
+    @media (min-width: $medium-width) and (max-width: $max-width) {
       grid-row: 2;
       grid-column: 2/3;
     }
@@ -102,7 +102,7 @@
   width: 20px;
   height: 20px;
 
-  border: 1px solid #2196F3;
+  border: 1px solid $color-3;
   border-radius: 2px;
   box-sizing: border-box;
 }
@@ -112,7 +112,7 @@
   line-height: 20px;
   font-weight: 400;
 
-  @media (max-width: 767px) {
+  @media (max-width: $max-width) {
     display: none;
   }
 
@@ -123,7 +123,7 @@
     line-height: 20px;
     font-weight: 400;
 
-    @media (max-width: 767px) {
+    @media (max-width: $max-width) {
       display: block;
     }
 

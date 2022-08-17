@@ -1,6 +1,6 @@
 .filter-list {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: $primary-indent;
   padding: 0;
 
   max-width: inherit;
@@ -16,8 +16,8 @@
   text-align: center;
   list-style: none;
 
-  @media (max-width: 767px) {
-    margin-bottom: 10px;
+  @media (max-width: $max-width) {
+    margin-bottom: $secondary-indent;
 
     font-size: 0.7em;
     line-height: 1.2;
@@ -25,7 +25,7 @@
 }
 
 .filter-list__link {
-  color: #4A4A4A;
+  color: $dark-text;
   text-decoration: none;
 }
 
@@ -41,15 +41,15 @@
   border: 1px solid #DFE5EC;
   box-sizing: border-box;
 
-  background-color: #fff;
+  background-color: $color-2;
   cursor: pointer;
 
-  @media (max-width: 767px) {
+  @media (max-width: $max-width) {
     padding: 5px;
   }
 
   &--current {
-    background-color: #2196F3;
+    background-color: $color-3;
     cursor: default;
   }
 
@@ -70,5 +70,5 @@
 
 .filter-list__item--current .filter-list__link {
   cursor: default;
-  color: #fff;
+  color: $light-text;
 }

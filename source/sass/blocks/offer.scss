@@ -1,8 +1,8 @@
 .offer {
-  padding: 20px;
+  padding: $primary-indent;
   padding-top: 17px;
 
-  background-color: #fff;
+  background-color: $color-2;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   cursor: pointer;
@@ -21,16 +21,16 @@
 
   font-size: 24px;
   line-height: 1;
-  color: #2196F3;
+  color: $color-3;
 
-  @media (max-width: 380px) {
+  @media (max-width: $min-width) {
     max-width: 120px;
     font-size: 20px;
   }
 }
 
 .offer__logo {
-  @media (max-width: 380px) {
+  @media (max-width: $min-width) {
     max-width: 100px;
   }
 }
@@ -41,7 +41,7 @@
   
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: $secondary-indent;
 
   list-style: none;
 }
@@ -49,17 +49,17 @@
 .offer__list-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
+  column-gap: $primary-indent;
   align-items: baseline;
 
-  @media (max-width: 380px) {
+  @media (max-width: $min-width) {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 10px;
+    row-gap: $secondary-indent;
   }
 
   &:not(:last-child) {
-    @media (max-width: 380px) {
-      padding-bottom: 10px;
+    @media (max-width: $min-width) {
+      padding-bottom: $secondary-indent;
       border-bottom: 1px solid #A0B0B9;
     }
   }
