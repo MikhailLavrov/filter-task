@@ -9,19 +9,19 @@
   align-items: center;
   box-sizing: border-box;
 
-  @media (max-width: 767px) {
-    margin-bottom: 10px;
+  @media (max-width: $desktop) {
+    margin-bottom: $secondary-indent;
     min-height: 40px;
   }
+}
 
-  &__logo {
-    border-radius: 50%;
-    background-color: #2196F3;
-    box-shadow: 0 9px 11px 0 rgba(55, 104, 142, 0.25);
+.page-header__logo {
+  border-radius: 50%;
+  background-color: $color-accent;
+  box-shadow: 0 9px 11px 0 rgba(55, 104, 142, 0.25);
 
-    @media (max-width: 767px) {
-      width: 40px;
-      height: 40px;
-    }
+  @media (max-width: $desktop) {
+    width: 40px;
+    height: 40px;
   }
 }

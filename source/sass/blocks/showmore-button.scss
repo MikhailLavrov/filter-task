@@ -1,13 +1,13 @@
 .showmore-button {
-  padding: 15px 20px;
+  padding: 15px $primary-indent;
   width: 100%;
 
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #fff;
+  color: $light-text;
 
-  background-color: #2196F3;
+  background-color: $color-accent;
   border: none;
   border-radius: 5px;
   cursor: pointer;
