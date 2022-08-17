@@ -1,19 +1,16 @@
-.offer-cell {
+.offer-cell__header {
+  margin: 0;
 
-  &__header {
-    margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #A0B0B9;
+  text-transform: uppercase;
+}
 
-    font-size: 12px;
-    line-height: 18px;
-    color: #A0B0B9;
-    text-transform: uppercase;
-  }
-
-  &__value {
-    margin: 0;
-    
-    font-size: 14px;
-    line-height: 21px;
-    text-transform: uppercase;
-  }
+.offer-cell__value {
+  margin: 0;
+  
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
 }
