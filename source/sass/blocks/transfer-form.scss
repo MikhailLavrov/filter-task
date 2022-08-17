@@ -1,6 +1,5 @@
 .transfer-form__fieldset {
   margin: 0;
-  padding: $primary-indent;
 
   border: none;
   border-radius: 5px;
@@ -8,7 +7,9 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
   @media (max-width: $max-width) {
+    padding: $primary-indent;
     margin-bottom: $secondary-indent;
+
     display: grid;
     row-gap: $secondary-indent;
     grid-template-columns: repeat(3, 1fr);
@@ -18,11 +19,15 @@
     grid-template-columns: repeat(5, 1fr);
     column-gap: $primary-indent;
   }
+
+  @media (min-width: $max-width) {
+    padding: $primary-indent 0 $secondary-indent;
+  }
 }
 
 .transfer-form__title {
   margin: 0;
-  margin-bottom: $primary-indent;
+  margin-bottom: $secondary-indent;
   
   font-size: 12px;
   line-height: 1;
@@ -33,6 +38,10 @@
   @media (max-width: $max-width) {
     margin: 0;
     grid-column: 1/-1;
+  }
+
+  @media (min-width: $max-width) {
+    padding: 0 $primary-indent;
   }
 }
 
@@ -49,12 +58,12 @@
     column-gap: 5px;
   }
 
-  &:not(:last-child) {
-    margin-bottom: $primary-indent;
+  @media (min-width: $max-width) {
+    padding: 10px 20px;
+  }
 
-    @media (max-width: $max-width) {
-      margin-bottom: 0;
-    }
+  &:hover {
+    background-color: $hover-color;
   }
 
   &--without {

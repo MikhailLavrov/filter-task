@@ -1,7 +1,9 @@
-.main__container {
+.main {
   width: 100%;
   max-width: 1280px;
-  
+}
+
+.main__container {
   display: grid;
   grid-template-columns: 30% 1fr;
   gap: $primary-indent;
