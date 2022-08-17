@@ -16,7 +16,7 @@
   text-align: center;
   list-style: none;
 
-  @media (max-width: $max-width) {
+  @media (max-width: $desktop) {
     margin-bottom: $secondary-indent;
 
     font-size: 0.7em;
@@ -41,15 +41,15 @@
   border: 1px solid #DFE5EC;
   box-sizing: border-box;
 
-  background-color: $color-2;
+  background-color: $color-light;
   cursor: pointer;
 
-  @media (max-width: $max-width) {
+  @media (max-width: $desktop) {
     padding: 5px;
   }
 
   &--current {
-    background-color: $color-3;
+    background-color: $color-accent;
     cursor: default;
   }
 

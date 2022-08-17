@@ -3,10 +3,10 @@
 
   border: none;
   border-radius: 5px;
-  background-color: $color-2;
+  background-color: $color-light;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-  @media (max-width: $max-width) {
+  @media (max-width: $desktop) {
     padding: $primary-indent;
     margin-bottom: $secondary-indent;
 
@@ -15,12 +15,12 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (min-width: $medium-width) and (max-width: $max-width) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     grid-template-columns: repeat(5, 1fr);
     column-gap: $primary-indent;
   }
 
-  @media (min-width: $max-width) {
+  @media (min-width: $desktop) {
     padding: $primary-indent 0 $secondary-indent;
   }
 }
@@ -35,12 +35,12 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
 
-  @media (max-width: $max-width) {
+  @media (max-width: $desktop) {
     margin: 0;
     grid-column: 1/-1;
   }
 
-  @media (min-width: $max-width) {
+  @media (min-width: $desktop) {
     padding: 0 $primary-indent;
   }
 }
@@ -53,12 +53,12 @@
   
   cursor: pointer;
 
-  @media (max-width: $max-width) {
+  @media (max-width: $desktop) {
     margin-bottom: 0;
     column-gap: 5px;
   }
 
-  @media (min-width: $max-width) {
+  @media (min-width: $desktop) {
     padding: 10px 20px;
   }
 
@@ -69,13 +69,13 @@
   &--without {
     grid-column: 2/-1;
 
-    @media (min-width: $medium-width) and (max-width: $max-width) {
+    @media (min-width: $tablet) and (max-width: $desktop) {
       grid-column: 1/2;
     }
   }
 
   &--all {
-    @media (min-width: $medium-width) and (max-width: $max-width) {
+    @media (min-width: $tablet) and (max-width: $desktop) {
       grid-row: 2;
       grid-column: 2/3;
     }
@@ -111,7 +111,7 @@
   width: 20px;
   height: 20px;
 
-  border: 1px solid $color-3;
+  border: 1px solid $color-accent;
   border-radius: 2px;
   box-sizing: border-box;
 }
@@ -121,7 +121,7 @@
   line-height: 20px;
   font-weight: 400;
 
-  @media (max-width: $max-width) {
+  @media (max-width: $desktop) {
     display: none;
   }
 
@@ -132,7 +132,7 @@
     line-height: 20px;
     font-weight: 400;
 
-    @media (max-width: $max-width) {
+    @media (max-width: $desktop) {
       display: block;
     }
 

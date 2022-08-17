@@ -10,7 +10,7 @@
   box-sizing: border-box;
   overflow: hidden;
 
-  @media (max-width: $max-width) {
+  @media (max-width: $desktop) {
     display: block;
   }
 }

@@ -11,11 +11,11 @@
   position: relative;
   overflow: hidden;
 
-  @media (max-width: $max-width) {
+  @media (max-width: $desktop) {
     padding: $primary-indent $primary-indent;
   }
 
-  @media (min-width: $medium-width) and (max-width: $max-width) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     padding: 50px 50px;
   }
 }
