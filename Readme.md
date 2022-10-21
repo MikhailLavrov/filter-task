@@ -15,7 +15,7 @@ Getting Started with:
 ```sh
 npm start
 ```
-
+---
 ![Иллюстрация к проекту](https://github.com/MikhailLavrov/filter-task/raw/master/source/img/thumbnail.webp)
 
 
